@@ -1,5 +1,4 @@
 import csv
-from re import template
 
 
 def readtemplate():
@@ -22,17 +21,9 @@ def readmapping():
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
         for country in countrylist:
-            with open(f'{country}-inv1.xml', "w", encoding="utf-8-sig") as file:
+            with open(f'outputfiles/{country}-inv1.xml', "w", encoding="utf-8-sig") as file:
                 file.write(documents[country])
         print(documents["ES"])
-        # for row in csv_reader:
-        #    for cell in countrylist:
 
 
 readmapping()
-
-#replaced = data.replace("{DOKUMENTID}", "Panus")
-
-
-# with open("test2.xml", "w") as f:
-#    f.write(replaced)

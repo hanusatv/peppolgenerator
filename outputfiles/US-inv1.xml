@@ -130,7 +130,7 @@
 	</cac:LegalMonetaryTotal>
 	<cac:InvoiceLine>
 		<cbc:ID>1</cbc:ID>
-		<cbc:InvoicedQuantity unitCode="<!-- UNITOFMEASURECODE-->">7</cbc:InvoicedQuantity>
+		<cbc:InvoicedQuantity unitCode="">7</cbc:InvoicedQuantity>
 		<cbc:LineExtensionAmount currencyID= "USD">2800</cbc:LineExtensionAmount>
 		<cac:OrderLineReference>
 			<cbc:LineID>10000</cbc:LineID>
@@ -164,7 +164,7 @@
 	</cac:InvoiceLine>
 	<cac:InvoiceLine>
 		<cbc:ID>2</cbc:ID>
-		<cbc:InvoicedQuantity unitCode="<!-- UNITOFMEASURECODE-->">3</cbc:InvoicedQuantity>
+		<cbc:InvoicedQuantity unitCode="">3</cbc:InvoicedQuantity>
 		<cbc:LineExtensionAmount currencyID="USD">1500</cbc:LineExtensionAmount>
 		<cac:OrderLineReference>
 			<cbc:LineID>2000</cbc:LineID>
