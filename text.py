@@ -1,11 +1,9 @@
 import csv
 
-
 def readtemplate():
     with open('template.xml', 'r', encoding='utf8') as f:
         data = f.read()
         return data
-
 
 def readmapping():
     countrylist = []
@@ -24,6 +22,5 @@ def readmapping():
             with open(f'outputfiles/{country}-inv1.xml', "w", encoding="utf-8-sig") as file:
                 file.write(documents[country])
         print(documents["ES"])
-
 
 readmapping()
