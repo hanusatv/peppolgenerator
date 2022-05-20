@@ -1,0 +1,14 @@
+#Folder where the templates are located.
+TEMPLATE_DIR: templates
+#Folder where the translation variables are located.
+VARIABLES_DIR: variables
+#Folder where the generated files will be dumped.
+OUTPUT_DIR: outputfiles
+#Name of the outputfiles. The country code will be set as a prefix to the name.
+OUTPUT_FILE_NAME: file-1.xml
+#Template file you want to generate localized copies of.
+TEMPLATE_FILE: template.xml
+#Variables file that contain translations of localized words. Must be a .csv file.
+VARIABLES_FILE: variables.csv
+#Specify the dekimiter of the .csv file used for translation
+CSV_DELIMITER: ;

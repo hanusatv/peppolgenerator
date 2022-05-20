@@ -1,19 +1,29 @@
-import csv, os
-from fileinput import filename
+import csv, os, yaml
 
-TEMPLATE_DIR = "templates"
-OUTPUT_DIR = "outputfiles"
-VARIABLES_DIR ="variables"
+def loadsettings():
+    with open("settings.yaml","r",encoding="utf-8") as f:
+        settings = yaml.safe_load(f)
+        return settings
+
+settings = loadsettings()
+
+TEMPLATE_DIR = settings["TEMPLATE_DIR"]
+VARIABLES_DIR = settings["VARIABLES_DIR"]
+OUTPUT_DIR = settings["OUTPUT_DIR"]
+TEMPLATE_FILE = settings["TEMPLATE_FILE"]
+OUTPUT_FILE_NAME = settings["OUTPUT_FILE_NAME"]
+VARIABLES_FILE = settings["VARIABLES_FILE"]
+CSV_DELIMITER = settings["CSV_DELIMITER"]
 
 def readtemplate():
-    with open(os.path.join(TEMPLATE_DIR,"template.xml"), 'r', encoding='utf8') as f:
+    with open(os.path.join(TEMPLATE_DIR,TEMPLATE_FILE), 'r', encoding='utf8') as f:
         data = f.read()
         return data
 
-def readmapping():
+def createfiles():
     countrylist = []
-    with open(os.path.join(VARIABLES_DIR,"variables.csv"), newline="", encoding="utf-8-sig") as file:
-        csv_reader = csv.DictReader(file, delimiter=";")
+    with open(os.path.join(VARIABLES_DIR,VARIABLES_FILE), newline="", encoding="utf-8-sig") as f:
+        csv_reader = csv.DictReader(f, delimiter=CSV_DELIMITER)
         countrylist = csv_reader.fieldnames[1:]
         documents = {}
         template = readtemplate()
@@ -23,10 +33,10 @@ def readmapping():
             for country in countrylist:
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
+        #Generer oversatte filer
         for country in countrylist:
-            filename = f'{country}-inv1.xml'
-            with open(os.path.join(OUTPUT_DIR,filename), "w", encoding="utf-8-sig") as file:
-                file.write(documents[country])
-        print(documents["ES"])
+            filename = f'{country}-{OUTPUT_FILE_NAME}'
+            with open(os.path.join(OUTPUT_DIR,filename), "w", encoding="utf-8-sig") as f:
+                f.write(documents[country])
 
-readmapping()
+createfiles()
