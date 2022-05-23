@@ -1,35 +1,35 @@
-﻿KEY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;PL;SE;US
-INVOICENOTE;;;;;;;;;;Please note we have a new phone number: 22 22 22 22;;;;;;
-CURRENCY;EUR;AUD;EUR;CHF;EUR;DKK;EUR;EUR;EUR;GBP;EUR;NOK;NZD;PLN;SEK;USD
-BUYERREFERENCE;;Reception furniture;;;;Møbler til receptionen;;;;Reception furniture;;;;;;
-CONTRACTREFERENCE;;;;;;;;;;Framework no 1;;;;;;
-SUPPLIERNAME;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Fredborg Lamper;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers
-SUPPLIERSTREETNAME;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place, 2-4;Nyborgvej 566;Waterloo Place, 2-4;Waterloo Place, 2-4;;Waterloo Place, 2-4;;;;;;
-SUPPLIERADDITIONALSTREETNAME;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;;;Waverly Gate;;Waverly Gate;;;;;;
-SUPPLIERCITYNAME;Dresden;EAST MELBOURNE;BURCHT;Buchrain;Dresden;København K;Alicante Alacant;Helsinki;;Edinburgh;;;;;;
-SUPPLIERPOSTALZONE;1238;3002;2070;6033;1238;1152;3003;57810;;EH1 3EG;;;;;;
-SUPPLIERCOUNTRY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;PL;SE;US
-SUPPLIERCOMPANYID;295267495;295267495B01;295267495B01;CHE-295.267.495MWST;295267495;99999999;295267495A;295267495;;GB666666666;;;;;;
-CUSTOMERNAME;CRONUS AT;CRONUS AU;CRONUS BE;CRONUS CH;CRONUS DE;CRONUS Danmark AS;CRONUS ES;CRONUS FI;CRONUS FR;CRONUS GB ltd.;CRONUS NL;CRONUS NOK;CRONUS NZ;CRONUS PL;CRONUS SE;CRONUS US
-CUSTOMERSTREETNAME;Ringstrasse 5;1 Epping Road;De Ring 5;Hofstrasse 12;Hofstrasse 12;Ringen 5;Avenida Aragón, 5;Kaarikuja 5;;7122 South Ashford Street;;;;;;
-CUSTOMERADDITIONALSTREETNAME;;NSW;Zone II;Basel;Benrath;;Centro Negocios;;;Westminster;;;;;;
-CUSTOMERCITYNAME;Rosenstadt;CANBERRA;MECHELEN;Zug;Hamburg;Kugleby;Madrid;Helsinki;;London;;;;;;
-CUSTOMERPOSTALZONE;9999;2600;2800;6300;20097;9900;28023;1201;;W2 8HG;;;;;;
-CUSTOMERCOUNTRY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;PL;SE;US
-CUSTOMERCOUNTRYSUBENTRY;;;;;;;;;;Westminster;;;;;;
-CUSTOMERDELIVERYADDRESS;;;;;;;;;;Gate 15;;;;;;
-CUSTOMERID;ATU12345678;777777777;777777777;CHE-777.777.777MWST;777777777;77777777;77777777A;777777777;;777777777;;;;;;
-CUSTOMERCONTACTNAME;Heiko Graf;Robin Bettencourt;Dale Lebbink;Bernhard Kohler;Bernhard Kohler;Lukas Søndergaard;Sergio Valladares;Antero Tuominen;;Robin Bettencourt;;;;;;
-CUSTOMERCONTACTTELEPHONE;999 / 9 99 99 99;2054189362;+32 (0)2 424 65 60;0666-666-6666;999 / 9 99 99 99;11 22 33 44;91-2229788;+358 9 123 456;;2054189362;;;;;;
-CUSTOMEREMAIL;hg@cronus.at;rb@cronus.au;dl@cronus.be;bk@cronus.ch;bk@cronus.de;ls@cronus.dk;sv@cronus.es;at@cronus.fi;;rb@cronus.uk;;;;;;
-DELIVERYPARTYNAME;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL
-PAYMENTTERMSNOTE;;Payment within 10 days, 2% discount;;;;Kontantrabat på 2% ved betaling inden 10 dage.;;;;Payment within 10 days, 2% discount;;;;;;
-ALLOWANCECHARGE1NAME;;;;;;;;;;Cleaning;;;;;;
-ALLOWANCECHARGE2NAME;;;;;;;;;;Charge;;;;;;
-TOTALTAXAMOUNT;1020.2;765.15;1071.21;408.08;969.19;1275.25;1071.21;10224.24;;1020.2;;;;;;
-TOTALAMOUNTINCLTAX;6121.2;5866.15;6172.21;5509.08;6070.19;6376.25;6172.21;6325.24;;6121.20;;;;;;
-TAXPERCENTAGE;20;15;21;8;19;25;21;24;;20;;;;;;
-TOTALAMOUNTEXCLTAX;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101
-ITEM1DESCRIPTION;PARIS Stuhl, schwarz;PARIS Guest Chair, black;PARIS stoel, zwart;PARIS Stuhl, schwarz;PARIS Stuhl, schwarz;PARIS stol, sort;PARIS Silla, negra;PARIS-vierastuoli, musta;;PARIS Guest Chair, black;;;;;;
-ITEM2DESCRIPTION;LONDON Stuhl, blau;LONDON Guest Chair, blue;LONDON stoel, blauw;LONDON Stuhl, blau;LONDON Stuhl, blau;LONDON stol, blå;LONDRES Silla, azul;LONDON-toimistotuoli, sin;;LONDON Guest Chair, blue;;;;;;
-UNITOFMEASURECODE;STÜCK;EA;STUKS;STK;STÜCK;STK;UDS;KPL;;AE;;;;;;
+﻿KEY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;SE;US
+INVOICENOTE;;Please note we have a new phone number: 2054189362;;;;Bemærk at vi har fået nyt  telefonnummer: +45 45 81 32 97;;;;Please note we have a new phone number: 22 22 22 22;;;Please note we have a new phone number: 2-222-2222;;Please note we have a new phone number: 650-513-0514
+CURRENCY;EUR;AUD;EUR;CHF;EUR;DKK;EUR;EUR;EUR;GBP;EUR;NOK;NZD;SEK;USD
+BUYERREFERENCE;;Reception furniture;;;;Møbler til receptionen;;;;Reception furniture;;;Reception furniture;;Reception furniture
+CONTRACTREFERENCE;;Framework no 1;;;;Ventesal 1;;;;Framework no 1;;;Framework no 1;;Framework no 1
+SUPPLIERNAME;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Fredborg Lamper;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers;Nod Publishers
+SUPPLIERSTREETNAME;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place 2-4;Waterloo Place, 2-4;Nyborgvej 566;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;Waterloo Place, 2-4;172 Field Green
+SUPPLIERADDITIONALSTREETNAME;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;;;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;Waverly Gate;
+SUPPLIERCITYNAME;Dresden;EAST MELBOURNE;BURCHT;Buchrain;Dresden;København K;Alicante Alacant;Helsinki;Bordeaux;Edinburgh;Waalwijk;SANDVIKA;Annes Brook;STOCKHOLM;Atlanta
+SUPPLIERPOSTALZONE;1238;3002;2070;6033;1238;1152;3003;57810;33000;EH1 3EG;8071 LM;1001;7001;114 32;31772
+SUPPLIERCOUNTRY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;SE;US
+SUPPLIERCOMPANYID;295267495;295267495B01;295267495B01;CHE-295.267.495MWST;295267495;99999999;295267495A;295267495;FR29526749567;GB666666666;295267495B01;NO 295 267 495;295267495;SE295267495601;
+CUSTOMERNAME;CRONUS AT;CRONUS AU;CRONUS BE;CRONUS CH;CRONUS DE;CRONUS Danmark AS;CRONUS ES;CRONUS FI;CRONUS FR;CRONUS GB ltd.;CRONUS NL;CRONUS NOK;CRONUS NZ;CRONUS SE;CRONUS US
+CUSTOMERSTREETNAME;Ringstrasse 5;1 Epping Road;De Ring 5;Hofstrasse 12;Hofstrasse 12;Ringen 5;Avenida Aragón, 5;Kaarikuja 5;5 av. Pierre de Coubertin;7122 South Ashford Street;De Ring 5;Ringveien 5;Level 3;Ringvägen 5;7122 South Ashford Street
+CUSTOMERADDITIONALSTREETNAME;;NSW;Zone II;Basel;Benrath;;Centro Negocios;;B.P. 155;Westminster;Buitenveldert;Økern;7-9 Fanshawe Street;Box 105;Westminster
+CUSTOMERCITYNAME;Rosenstadt;CANBERRA;MECHELEN;Zug;Hamburg;Kugleby;Madrid;Helsinki;Paris;London;Amsterdam;OSLO;Auckland;GÖTEBORG;Atlanta
+CUSTOMERPOSTALZONE;9999;2600;2800;6300;20097;9900;28023;1201;75008;W2 8HG;1111 DA;102;1015;415 06;31772
+CUSTOMERCOUNTRY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;SE;US
+CUSTOMERCOUNTRYSUBENTRY;;;;;;;;;;Westminster;Buitenveldert;Økern;Auckland;GÖTEBORG;GA
+CUSTOMERDELIVERYADDRESS;;;;;;;;;;Gate 15;;;Gate 15;;7122 South Ashford Street
+CUSTOMERID;ATU12345678;777777777;777777777;CHE-777.777.777MWST;777777777;77777777;77777777A;777777777;FR77777777777;777777777;NL777777770B77;NO 777 777 777;777777777;SE777777777701;
+CUSTOMERCONTACTNAME;Heiko Graf;Robin Bettencourt;Dale Lebbink;Bernhard Kohler;Bernhard Kohler;Lukas Søndergaard;Sergio Valladares;Antero Tuominen;Gérard Bélisle;Robin Bettencourt;Dale Lebbink;Stein Emanuelsen;Robin Bettencourt;Viktor Magnusson;Robin Bettencourt
+CUSTOMERCONTACTTELEPHONE;999 / 9 99 99 99;2054189362;+32 (0)2 424 65 60;0666-666-6666;999 / 9 99 99 99;11 22 33 44;91-2229788;+358 9 123 456;+33 1 09 75 83 51;2054189362;31 - 678412536;123 44 567 ;2-541-8962;+46 123-4567-890; 650-513-0578
+CUSTOMEREMAIL;hg@cronus.at;rb@cronus.au;dl@cronus.be;bk@cronus.ch;bk@cronus.de;ls@cronus.dk;sv@cronus.es;at@cronus.fi;gb@cronus.fr;rb@cronus.uk;dl@cronus.nl;se@cronus.no;rb@cronus.nz;vm@cronus.se;rb@cronus.com
+DELIVERYPARTYNAME;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL
+PAYMENTTERMSNOTE;;Payment within 10 days, 2% discount;;;;Kontantrabat på 2% ved betaling inden 10 dage.;;;;Payment within 10 days, 2% discount;;;Payment within 10 days, 2% discount;;Payment within 10 days, 2% discount
+ALLOWANCECHARGE1NAME;;Cleaning;;;;Rengøring;;;;Cleaning;;;Cleaning;;Cleaning
+ALLOWANCECHARGE2NAME;;Charge;;;;Rabat;;;;Charge;;;Charge;;Charge
+TOTALTAXAMOUNT;1020.2;765.15;1071.21;408.08;969.19;1275.25;1071.21;10224.24;1020.2;1020.2;1071.21;1275.25;765.15;1275.25;5101
+TOTALAMOUNTINCLTAX;6121.2;5866.15;6172.21;5509.08;6070.19;6376.25;6172.21;6325.24;6121.20;6121.20;6172.21;6376.25;5866.15;6376.25;5101
+TAXPERCENTAGE;20;15;21;8;19;25;21;24;20;20;21;25;15;25;
+TOTALAMOUNTEXCLTAX;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101;5101
+ITEM1DESCRIPTION;PARIS Stuhl, schwarz;PARIS Guest Chair, black;PARIS stoel, zwart;PARIS Stuhl, schwarz;PARIS Stuhl, schwarz;PARIS stol, sort;PARIS Silla, negra;PARIS-vierastuoli, musta;Chaise dactylo PARIS, noire;PARIS Guest Chair, black;PARIJS Bezoekersstoel, zwart;PARIS gjestestol, svart;PARIS Guest Chair, black;PARIS Besöksstol, svart;PARIS Guest Chair, black
+ITEM2DESCRIPTION;LONDON Stuhl, blau;LONDON Guest Chair, blue;LONDON stoel, blauw;LONDON Stuhl, blau;LONDON Stuhl, blau;LONDON stol, blå;LONDRES Silla, azul;LONDON-toimistotuoli, sin;Chaise dactylo LONDRES, bleue;LONDON Guest Chair, blue;LONDEN Draaistoel, blauw;LONDON svingstol, blå;LONDON Guest Chair, blue;LONDON Kontorsstol, blå;LONDON Guest Chair, blue
+UNITOFMEASURECODE;STÜCK;EA;STUKS;STK;STÜCK;STK;UDS;KPL;PCS;AE;STUKS;STK;AE;STYCK;AE

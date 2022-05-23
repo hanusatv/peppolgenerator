@@ -1,10 +1,9 @@
-import csv, os, yaml
+import csv, os, yaml, datetime
 
 def loadsettings():
     with open("settings.yaml","r",encoding="utf-8") as f:
         settings = yaml.safe_load(f)
         return settings
-
 settings = loadsettings()
 
 TEMPLATE_DIR = settings["TEMPLATE_DIR"]
@@ -34,9 +33,11 @@ def createfiles():
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
         #Generer oversatte filer
+        formattednow = datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
+        os.mkdir(os.path.join(OUTPUT_DIR,formattednow))
         for country in countrylist:
             filename = f'{country}-{OUTPUT_FILE_NAME}'
-            with open(os.path.join(OUTPUT_DIR,filename), "w", encoding="utf-8-sig") as f:
+            with open(os.path.join(OUTPUT_DIR,formattednow,filename), "w", encoding="utf-8-sig") as f:
                 f.write(documents[country])
 
 createfiles()

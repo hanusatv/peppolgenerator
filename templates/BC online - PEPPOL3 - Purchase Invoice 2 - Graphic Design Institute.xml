@@ -80,17 +80,13 @@
 				</cac:TaxScheme>
 			</cac:PartyTaxScheme>
 			<cac:PartyLegalEntity>
-				<cbc:RegistrationName><!-- CUSTOMERNAME
-                --></cbc:RegistrationName>
+				<cbc:RegistrationName><!-- CUSTOMERNAME--></cbc:RegistrationName>
 				<cbc:CompanyID schemeID="0183"><!-- CUSTOMERID--></cbc:CompanyID>
 			</cac:PartyLegalEntity>
 			<cac:Contact>
-				<cbc:Name><!-- CUSTOMERCONTACTNAME
-                --></cbc:Name>
-				<cbc:Telephone><!-- CUSTOMERCONTACTTELEPHONE
-                --></cbc:Telephone>
-				<cbc:ElectronicMail><!-- CUSTOMEREMAIL
-                --></cbc:ElectronicMail>
+				<cbc:Name><!-- CUSTOMERCONTACTNAME--></cbc:Name>
+				<cbc:Telephone><!-- CUSTOMERCONTACTTELEPHONE--></cbc:Telephone>
+				<cbc:ElectronicMail><!-- CUSTOMEREMAIL--></cbc:ElectronicMail>
 			</cac:Contact>
 		</cac:Party>
 	</cac:AccountingCustomerParty>
@@ -99,30 +95,22 @@
         <cac:DeliveryLocation>
             <cbc:ID schemeID="0088">7300010000001</cbc:ID>
             <cac:Address>
-                <cbc:StreetName><!-- CUSTOMERSTREETNAME
-                --></cbc:StreetName>
-                <cbc:AdditionalStreetName><!-- CUSTOMERADDITIONALSTREETNAME
-                --></cbc:AdditionalStreetName>
-                <cbc:CityName><!-- CUSTOMERCITYNAME
-                --></cbc:CityName>
-                <cbc:PostalZone><!-- CUSTOMERPOSTALZONE
-                --></cbc:PostalZone>
-                <cbc:CountrySubentity><!-- CUSTOMERCOUNTRYSUBENTRY
-                --></cbc:CountrySubentity>
+                <cbc:StreetName><!-- CUSTOMERSTREETNAME--></cbc:StreetName>
+                <cbc:AdditionalStreetName><!-- CUSTOMERADDITIONALSTREETNAME--></cbc:AdditionalStreetName>
+                <cbc:CityName><!-- CUSTOMERCITYNAME--></cbc:CityName>
+                <cbc:PostalZone><!-- CUSTOMERPOSTALZONE--></cbc:PostalZone>
+                <cbc:CountrySubentity><!-- CUSTOMERCOUNTRYSUBENTRY--></cbc:CountrySubentity>
                 <cac:AddressLine>
-                    <cbc:Line><!-- CUSTOMERDELIVERYADDRESS
-                    --></cbc:Line>
+                    <cbc:Line><!-- CUSTOMERDELIVERYADDRESS--></cbc:Line>
                 </cac:AddressLine>
                 <cac:Country>
-                    <cbc:IdentificationCode><!-- CUSTOMERCOUNTRY
-                    --></cbc:IdentificationCode>
+                    <cbc:IdentificationCode><!-- CUSTOMERCOUNTRY--></cbc:IdentificationCode>
                 </cac:Country>
             </cac:Address>
         </cac:DeliveryLocation>
         <cac:DeliveryParty>
             <cac:PartyName>
-                <cbc:Name><!-- DELIVERYPARTYNAME
-                --></cbc:Name>
+                <cbc:Name><!-- DELIVERYPARTYNAME--></cbc:Name>
             </cac:PartyName>
         </cac:DeliveryParty>
     </cac:Delivery>
@@ -138,8 +126,7 @@
         </cac:PayeeFinancialAccount>
     </cac:PaymentMeans>
     <cac:PaymentTerms>
-        <cbc:Note><!-- PAYMENTTERMSNOTE
-        --></cbc:Note>
+        <cbc:Note><!-- PAYMENTTERMSNOTE--></cbc:Note>
     </cac:PaymentTerms>
     <cac:AllowanceCharge>
         <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
@@ -170,8 +157,7 @@
         </cac:TaxCategory>
     </cac:AllowanceCharge>
     <cac:TaxTotal>
-        <cbc:TaxAmount currencyID="<!-- CURRENCY-->"><!-- TOTALTAXAMOUNT
-        --></cbc:TaxAmount>
+        <cbc:TaxAmount currencyID="<!-- CURRENCY-->"><!-- TOTALTAXAMOUNT--></cbc:TaxAmount>
         <cac:TaxSubtotal>
             <cbc:TaxableAmount currencyID="<!-- CURRENCY-->">5101.0</cbc:TaxableAmount>
             <cbc:TaxAmount currencyID="<!-- CURRENCY-->"><!-- TOTALTAXAMOUNT--></cbc:TaxAmount>
@@ -186,14 +172,11 @@
     </cac:TaxTotal>
     <cac:LegalMonetaryTotal>
         <cbc:LineExtensionAmount currencyID="<!-- CURRENCY-->">5001</cbc:LineExtensionAmount>
-        <cbc:TaxExclusiveAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTEXCLTAX
-        --></cbc:TaxExclusiveAmount>
-        <cbc:TaxInclusiveAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTINCLTAX
-        --></cbc:TaxInclusiveAmount>
+        <cbc:TaxExclusiveAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTEXCLTAX--></cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTINCLTAX--></cbc:TaxInclusiveAmount>
         <cbc:AllowanceTotalAmount currencyID="<!-- CURRENCY-->">200</cbc:AllowanceTotalAmount>
         <cbc:ChargeTotalAmount currencyID="<!-- CURRENCY-->">300</cbc:ChargeTotalAmount>
-        <cbc:PayableAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTINCLTAX
-        --></cbc:PayableAmount>
+        <cbc:PayableAmount currencyID="<!-- CURRENCY-->"><!-- TOTALAMOUNTINCLTAX--></cbc:PayableAmount>
     </cac:LegalMonetaryTotal>
     <cac:InvoiceLine>
     <cbc:ID>1</cbc:ID>
@@ -203,15 +186,12 @@
         <cac:AllowanceCharge>
             <cbc:ChargeIndicator>false</cbc:ChargeIndicator>
             <cbc:AllowanceChargeReasonCode>95</cbc:AllowanceChargeReasonCode>
-            <cbc:AllowanceChargeReason><!-- ALLOWANCECHARGE2NAME
-            --></cbc:AllowanceChargeReason>
+            <cbc:AllowanceChargeReason><!-- ALLOWANCECHARGE2NAME--></cbc:AllowanceChargeReason>
             <cbc:Amount currencyID="<!-- CURRENCY-->">500</cbc:Amount>
         </cac:AllowanceCharge>
         <cac:Item>
-            <cbc:Description><!-- ITEM1DESCRIPTION
-            --></cbc:Description>
-            <cbc:Name><!-- ITEM1DESCRIPTION
-            --></cbc:Name>   
+            <cbc:Description><!-- ITEM1DESCRIPTION--></cbc:Description>
+            <cbc:Name><!-- ITEM1DESCRIPTION--></cbc:Name>   
 			<cac:StandardItemIdentification>
 				<cbc:ID schemeID="0088">21382183120983</cbc:ID>
 			</cac:StandardItemIdentification>			
@@ -248,15 +228,12 @@
         <cac:AllowanceCharge>
             <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
             <cbc:AllowanceChargeReasonCode>CG</cbc:AllowanceChargeReasonCode>
-            <cbc:AllowanceChargeReason><!-- ALLOWANCECHARGE2NAME
-            --></cbc:AllowanceChargeReason>
+            <cbc:AllowanceChargeReason><!-- ALLOWANCECHARGE2NAME--></cbc:AllowanceChargeReason>
             <cbc:Amount currencyID="<!-- CURRENCY-->">101</cbc:Amount>
         </cac:AllowanceCharge> 
         <cac:Item>
-            <cbc:Description><!-- ITEM2DESCRIPTION
-            --></cbc:Description>
-            <cbc:Name><!-- ITEM2DESCRIPTION
-            --></cbc:Name>
+            <cbc:Description><!-- ITEM2DESCRIPTION--></cbc:Description>
+            <cbc:Name><!-- ITEM2DESCRIPTION--></cbc:Name>
 			<cac:StandardItemIdentification>
 				<cbc:ID schemeID="0088">21382183120984</cbc:ID>
 			</cac:StandardItemIdentification>
