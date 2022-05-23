@@ -33,11 +33,11 @@ def createfiles():
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
         #Generer oversatte filer
-        formattednow = datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
-        os.mkdir(os.path.join(OUTPUT_DIR,formattednow))
+        outputdirname = TEMPLATE_FILE + " " + datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
+        os.mkdir(os.path.join(OUTPUT_DIR,outputdirname))
         for country in countrylist:
             filename = f'{country}-{OUTPUT_FILE_NAME}'
-            with open(os.path.join(OUTPUT_DIR,formattednow,filename), "w", encoding="utf-8-sig") as f:
+            with open(os.path.join(OUTPUT_DIR,outputdirname,filename), "w", encoding="utf-8-sig") as f:
                 f.write(documents[country])
 
 createfiles()
