@@ -6,21 +6,20 @@ def loadsettings():
         return settings
 settings = loadsettings()
 
-TEMPLATE_DIR = settings["TEMPLATE_DIR"]
-VARIABLES_DIR = settings["VARIABLES_DIR"]
-OUTPUT_DIR = settings["OUTPUT_DIR"]
+FILES_DIR = "files"
+ACTIVE_DIR = settings["ACTIVE_DIR"]
 TEMPLATE_FILE = settings["TEMPLATE_FILE"]
 VARIABLES_FILE = settings["VARIABLES_FILE"]
 CSV_DELIMITER = settings["CSV_DELIMITER"]
 
 def readtemplate():
-    with open(os.path.join(TEMPLATE_DIR,TEMPLATE_FILE), 'r', encoding='utf8') as f:
+    with open(os.path.join(FILES_DIR,ACTIVE_DIR,TEMPLATE_FILE), 'r', encoding='utf8') as f:
         data = f.read()
         return data
 
 def createfiles():
     countrylist = []
-    with open(os.path.join(VARIABLES_DIR,VARIABLES_FILE), newline="", encoding="utf-8-sig") as f:
+    with open(os.path.join(FILES_DIR,ACTIVE_DIR,VARIABLES_FILE), newline="", encoding="utf-8-sig") as f:
         csv_reader = csv.DictReader(f, delimiter=CSV_DELIMITER)
         countrylist = csv_reader.fieldnames[1:]
         documents = {}
@@ -33,10 +32,10 @@ def createfiles():
                     f'<!-- {row["KEY"]}-->', row[country])
         #Generer oversatte filer
         outputdirname = TEMPLATE_FILE + " " + datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
-        os.mkdir(os.path.join(OUTPUT_DIR,outputdirname))
+        os.mkdir(os.path.join(FILES_DIR,ACTIVE_DIR,outputdirname))
         for country in countrylist:
             filename = f'{country} - {TEMPLATE_FILE}'
-            with open(os.path.join(OUTPUT_DIR,outputdirname,filename), "w", encoding="utf-8-sig") as f:
+            with open(os.path.join(FILES_DIR,ACTIVE_DIR,outputdirname,filename), "w", encoding="utf-8-sig") as f:
                 f.write(documents[country])
 
 createfiles()

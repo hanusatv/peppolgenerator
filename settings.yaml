@@ -1,12 +1,8 @@
-#Folder where the templates are located.
-TEMPLATE_DIR: templates
-#Folder where the translation variables are located.
-VARIABLES_DIR: variables
-#Folder where the generated files will be dumped.
-OUTPUT_DIR: outputfiles
+#Specifies the active directory. The directory must have a translations file, template file and optional .pdf file.
+ACTIVE_DIR: inv 1
 #Template file you want to generate localized copies of.
-TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 2 - Graphic Design Institute.xml
+TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 1 - Nod Publishers.xml
 #Variables file that contain translations of localized words. Must be a .csv file.
-VARIABLES_FILE: Purchase Invoice 2.csv
+VARIABLES_FILE: translations.csv
 #Specify the dekimiter of the .csv file used for translation
 CSV_DELIMITER: ;
