@@ -1,5 +1,4 @@
-import csv, os, yaml, datetime
-import encodepdf
+import csv, os, yaml, datetime, base64
 
 def loadsettings():
     with open("settings.yaml","r",encoding="utf-8") as f:
@@ -12,6 +11,12 @@ ACTIVE_DIR = settings["ACTIVE_DIR"]
 TEMPLATE_FILE = settings["TEMPLATE_FILE"]
 VARIABLES_FILE = settings["VARIABLES_FILE"]
 CSV_DELIMITER = settings["CSV_DELIMITER"]
+
+def getbase64string(path):
+    with open(path, "rb") as pdf_file:
+        encoded_string = base64.b64encode(pdf_file.read())
+        pure_string = encoded_string.decode('utf-8')
+        return(pure_string)
 
 def readtemplate():
     with open(os.path.join(FILES_DIR,ACTIVE_DIR,TEMPLATE_FILE), 'r', encoding='utf8') as f:
@@ -31,9 +36,9 @@ def createfiles():
             for country in countrylist:
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
-                pdfname = f'{country}.pdf'
-                if os.path.exists(os.path.join(FILES_DIR,ACTIVE_DIR,pdfname)):
-                    encodedpdf = encodepdf.getbase64string(os.path.join(FILES_DIR,ACTIVE_DIR,pdfname))
+                pdffile = os.path.join(FILES_DIR,ACTIVE_DIR,f'{country}.pdf')
+                if os.path.exists(pdffile):
+                    encodedpdf = getbase64string(pdffile)
                     documents[country] = documents[country].replace("<!-- ATTACHMENT-->",encodedpdf)
         #Generer oversatte filer
         outputdirname = TEMPLATE_FILE + " " + datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
