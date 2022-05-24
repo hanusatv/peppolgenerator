@@ -1,4 +1,5 @@
 import csv, os, yaml, datetime
+import encodepdf
 
 def loadsettings():
     with open("settings.yaml","r",encoding="utf-8") as f:
@@ -30,6 +31,10 @@ def createfiles():
             for country in countrylist:
                 documents[country] = documents[country].replace(
                     f'<!-- {row["KEY"]}-->', row[country])
+                pdfname = f'{country}.pdf'
+                if os.path.exists(os.path.join(FILES_DIR,ACTIVE_DIR,pdfname)):
+                    encodedpdf = encodepdf.getbase64string(os.path.join(FILES_DIR,ACTIVE_DIR,pdfname))
+                    documents[country] = documents[country].replace("<!-- ATTACHMENT-->",encodedpdf)
         #Generer oversatte filer
         outputdirname = TEMPLATE_FILE + " " + datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
         os.mkdir(os.path.join(FILES_DIR,ACTIVE_DIR,outputdirname))

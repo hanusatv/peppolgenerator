@@ -1,2 +1,2 @@
-outputfiles/*
+files/*
 !files/.gitkeep
