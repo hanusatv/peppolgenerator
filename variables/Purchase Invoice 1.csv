@@ -19,7 +19,7 @@ CUSTOMERCONTACTNAME;Heiko Graf;Robin Bettencourt;Dale Lebbink;Bernhard Kohler;Be
 CUSTOMERCONTACTTELEPHONE;999 / 9 99 99 99;2054189362;+32 (0)2 424 65 60;0666-666-6666;999 / 9 99 99 99;11 22 33 44;91-2229788;+358 9 123 456;+33 1 09 75 83 51;2054189362;31 - 678412536;123 44 567 ;2-541-8962;+46 123-4567-890; 650-513-0578
 CUSTOMEREMAIL;hg@cronus.at;rb@cronus.au;dl@cronus.be;bk@cronus.ch;bk@cronus.de;ls@cronus.dk;sv@cronus.es;at@cronus.fi;gb@cronus.fr;rb@cronus.uk;dl@cronus.nl;se@cronus.no;rb@cronus.nz;vm@cronus.se;rb@cronus.com
 DELIVERYPARTYNAME;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL
-PAYMENTTERMSNOTE;;Payment within 10 days, 2% discount;;;;Kontantrabat på 2% ved betaling inden 10 dage.;;;;Payment within 10 days, 2% discount;;;;;Payment within 10 days, 2% discount
+PAYMENTTERMSNOTE;Zahlungsziel bis 31.01.2022;Payment due: 31.01.2022;Verschuldigde betaling: 31.01.2022;Zahlungsziel bis 31.01.2022;Zahlungsziel bis 31.01.2022;Betaling seneste 31 januar 2022;Tiempo límite de pago: 31.01.2022;Maksuerä: 31.01.2022;Echéance: 31.01.2022;Payment due: 31.01.2022;Verschuldigde betaling: 31.01.2022;Innbetaling senest 31. januar 2022;Payment due: 31.01.2022;Beloppet ska vara inbetalt senast 31 januari 2022;Payment due: 31.01.2022
 TOTALTAXAMOUNT;860;645;903;344;817;1075;903;1032;860;860;903;1075;645;1075;
 TOTALAMOUNTINCLTAX;5160;4945;5203;4644;5117;5375;5203;5332;5160;5160;5203;5375;4945;5375;
 TAXPERCENTAGE;20;15;21;8;19;25;21;24;20;20;21;25;15;25;

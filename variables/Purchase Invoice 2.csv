@@ -1,4 +1,6 @@
 ﻿KEY;AT;AU;BE;CH;DE;DK;ES;FI;FR;GB;NL;NO;NZ;SE;US
+ISSUEDATE;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;01-01-2022;2022-01-01;01-01-2022
+DUEDATE;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;28-02-2022;2022-02-08;28-02-2022
 INVOICENOTE;;Please note we have a new phone number: 2054189362;;;;Bemærk at vi har fået nyt  telefonnummer: +45 45 81 32 97;;;;Please note we have a new phone number: 22 22 22 22;;;Please note we have a new phone number: 2-222-2222;;Please note we have a new phone number: 650-513-0514
 CURRENCY;EUR;AUD;EUR;CHF;EUR;DKK;EUR;EUR;EUR;GBP;EUR;NOK;NZD;SEK;USD
 BUYERREFERENCE;;Reception furniture;;;;Møbler til receptionen;;;;Reception furniture;;;Reception furniture;;Reception furniture
@@ -23,7 +25,7 @@ CUSTOMERCONTACTNAME;Heiko Graf;Robin Bettencourt;Dale Lebbink;Bernhard Kohler;Be
 CUSTOMERCONTACTTELEPHONE;999 / 9 99 99 99;2054189362;+32 (0)2 424 65 60;0666-666-6666;999 / 9 99 99 99;11 22 33 44;91-2229788;+358 9 123 456;+33 1 09 75 83 51;2054189362;31 - 678412536;123 44 567 ;2-541-8962;+46 123-4567-890; 650-513-0578
 CUSTOMEREMAIL;hg@cronus.at;rb@cronus.au;dl@cronus.be;bk@cronus.ch;bk@cronus.de;ls@cronus.dk;sv@cronus.es;at@cronus.fi;gb@cronus.fr;rb@cronus.uk;dl@cronus.nl;se@cronus.no;rb@cronus.nz;vm@cronus.se;rb@cronus.com
 DELIVERYPARTYNAME;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL;DHL
-PAYMENTTERMSNOTE;;Payment within 10 days, 2% discount;;;;Kontantrabat på 2% ved betaling inden 10 dage.;;;;Payment within 10 days, 2% discount;;;Payment within 10 days, 2% discount;;Payment within 10 days, 2% discount
+PAYMENTTERMSNOTE;Zahlungsziel bis 28.02.2022;Payment due: 28.02.2022;Betaling uiterlijk 28 februari 2022;Zahlungsziel bis 28.02.2022;Zahlungsziel bis 28.02.2022;Betaling seneste 28 februar 2022;Vencimiento de pago a 28 de febero 2022;Maksu 28. helmikuu 2022 mennessä;Paiement dû le 28 février 2022;Payment due: 28.02.2022;Betaling uiterlijk 28 februari 2022;Betaling forfaller 28 februar 2022;Payment due: 28.02.2022;Förfallodatum för betalning 28 februari 2022;Payment due: 28.02.2022
 ALLOWANCECHARGE1NAME;;Cleaning;;;;Rengøring;;;;Cleaning;;;Cleaning;;Cleaning
 ALLOWANCECHARGE2NAME;;Charge;;;;Rabat;;;;Charge;;;Charge;;Charge
 TOTALTAXAMOUNT;1020.2;765.15;1071.21;408.08;969.19;1275.25;1071.21;10224.24;1020.2;1020.2;1071.21;1275.25;765.15;1275.25;5101

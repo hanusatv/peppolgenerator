@@ -6,12 +6,12 @@
     <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
     <cbc:ID>100026</cbc:ID>
     <cbc:CustomInvoiceID>123456</cbc:CustomInvoiceID>
-    <cbc:IssueDate>2022-01-01</cbc:IssueDate>
-    <cbc:DueDate>2022-01-31</cbc:DueDate>
+    <cbc:IssueDate><!-- ISSUEDATE--></cbc:IssueDate>
+    <cbc:DueDate><!-- DUEDATE--></cbc:DueDate>
     <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
     <cbc:Note><!-- INVOICENOTE--></cbc:Note>
-    <cbc:TaxPointDate>2022-01-01</cbc:TaxPointDate>
-    <cbc:DocumentCurrencyCode>"<!-- CURRENCY-->"</cbc:DocumentCurrencyCode>
+    <cbc:TaxPointDate><!-- ISSUEDATE--></cbc:TaxPointDate>
+    <cbc:DocumentCurrencyCode><!-- CURRENCY--></cbc:DocumentCurrencyCode>
     <cbc:AccountingCost>4025:123:4343</cbc:AccountingCost>
     <cbc:BuyerReference><!-- BUYERREFERENCE--></cbc:BuyerReference>
     <cac:InvoicePeriod>

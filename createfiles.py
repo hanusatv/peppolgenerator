@@ -10,7 +10,6 @@ TEMPLATE_DIR = settings["TEMPLATE_DIR"]
 VARIABLES_DIR = settings["VARIABLES_DIR"]
 OUTPUT_DIR = settings["OUTPUT_DIR"]
 TEMPLATE_FILE = settings["TEMPLATE_FILE"]
-OUTPUT_FILE_NAME = settings["OUTPUT_FILE_NAME"]
 VARIABLES_FILE = settings["VARIABLES_FILE"]
 CSV_DELIMITER = settings["CSV_DELIMITER"]
 
@@ -36,7 +35,7 @@ def createfiles():
         outputdirname = TEMPLATE_FILE + " " + datetime.datetime.now().strftime("%m-%d-%Y %H %M %S")
         os.mkdir(os.path.join(OUTPUT_DIR,outputdirname))
         for country in countrylist:
-            filename = f'{country}-{OUTPUT_FILE_NAME}'
+            filename = f'{country} - {TEMPLATE_FILE}'
             with open(os.path.join(OUTPUT_DIR,outputdirname,filename), "w", encoding="utf-8-sig") as f:
                 f.write(documents[country])
 
