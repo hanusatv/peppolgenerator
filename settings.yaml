@@ -1,5 +1,5 @@
 #Specifies the active directory. The directory must have a translations file, template file and optional .pdf file.
-ACTIVE_DIR: excel inv
+ACTIVE_DIR: excel
 #Template file you want to generate localized copies of.
 TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 1 - Nod Publishers.xml
 #Variables file that contain translations of localized words. Must be a .xlsx file.
