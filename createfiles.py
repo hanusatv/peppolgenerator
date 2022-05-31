@@ -1,4 +1,4 @@
-import csv, os, yaml, datetime, base64, pandas
+import os, yaml, datetime, base64, pandas
 
 def loadsettings():
     with open("settings.yaml","r",encoding="utf-8") as f:
