@@ -1,4 +1,5 @@
 import os
+from re import A
 import yaml
 import datetime
 import base64
@@ -20,13 +21,15 @@ FILES_DIR = 'files'
 ACTIVE_DIR = os.path.join(FILES_DIR, settings['ACTIVE_DIR'])
 XML_TEMPLATE_FILE_NAME = settings['XML_TEMPLATE_FILE']
 XML_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['XML_TEMPLATE_FILE'])
-if settings['WORD_TEMPLATE_FILE'] != '':
-    WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['WORD_TEMPLATE_FILE'])
 XML_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['XML_VARIABLES_FILE'])
-if settings['WORD_VARIABLES_FILE'] != '':
+if settings['WORD_TEMPLATE_FILE'] != None:
+    WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['WORD_TEMPLATE_FILE'])
     WORD_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['WORD_VARIABLES_FILE'])
+    attachmentBool = True
+else:
+    attachmentBool = False
 
-if settings['WORD_TEMPLATE_FILE'] != '':
+if settings['WORD_TEMPLATE_FILE'] != None:
     df = pandas.read_excel(WORD_VARIABLES_FILE, index_col=0,
                             keep_default_na=False)
 
@@ -52,8 +55,8 @@ def createfiles():
         for key_translation, value_translation in dict_country.items():
             documents[country] = documents[country].replace(
                 f'<!-- {key_translation}-->', str(value_translation))
-        if WORD_TEMPLATE_FILE != "":
-            base64pdf = wordTemplateToBase64(country)
+        if attachmentBool:
+            base64pdf = wordTemplateToBase64(country,outputdirname)
             documents[country] = documents[country].replace(
                 '<!-- ATTACHMENT-->', base64pdf)
     # Generer oversatte filer
@@ -62,7 +65,7 @@ def createfiles():
             f.write(documents[country])
 
 
-def wordTemplateToBase64(localization):
+def wordTemplateToBase64(localization,outputdirname):
     with tempfile.TemporaryDirectory(prefix="peppolgenerator-") as tmpdir:
         dictdata = df[[localization]].to_dict()
         with zipfile.ZipFile(WORD_TEMPLATE_FILE, 'r') as zip_ref:
@@ -82,6 +85,7 @@ def wordTemplateToBase64(localization):
                   os.path.join(tmpdir, 'zipped.docx'))
         docx2pdf.convert(os.path.join(tmpdir, 'zipped.docx'),
                          os.path.join(tmpdir, 'base64encoded.pdf'))
+        shutil.copyfile(os.path.join(tmpdir, 'base64encoded.pdf'),os.path.join(ACTIVE_DIR, outputdirname, f'{localization}.pdf'))
         with open(os.path.join(tmpdir, 'base64encoded.pdf'), "rb") as pdf_file:
             encoded_string = base64.b64encode(pdf_file.read())
         pure_string = encoded_string.decode('utf-8')
