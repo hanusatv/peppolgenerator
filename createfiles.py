@@ -14,16 +14,21 @@ def loadsettings():
         settings = yaml.safe_load(f)
         return settings
 
-
 settings = loadsettings()
 
 FILES_DIR = 'files'
 ACTIVE_DIR = os.path.join(FILES_DIR, settings['ACTIVE_DIR'])
 XML_TEMPLATE_FILE_NAME = settings['XML_TEMPLATE_FILE']
 XML_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['XML_TEMPLATE_FILE'])
-WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['WORD_TEMPLATE_FILE'])
+if settings['WORD_TEMPLATE_FILE'] != '':
+    WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['WORD_TEMPLATE_FILE'])
 XML_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['XML_VARIABLES_FILE'])
-WORD_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['WORD_VARIABLES_FILE'])
+if settings['WORD_VARIABLES_FILE'] != '':
+    WORD_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['WORD_VARIABLES_FILE'])
+
+if settings['WORD_TEMPLATE_FILE'] != '':
+    df = pandas.read_excel(WORD_VARIABLES_FILE, index_col=0,
+                            keep_default_na=False)
 
 
 def readXmlTemplate():
@@ -47,7 +52,7 @@ def createfiles():
         for key_translation, value_translation in dict_country.items():
             documents[country] = documents[country].replace(
                 f'<!-- {key_translation}-->', str(value_translation))
-        if os.path.exists(WORD_VARIABLES_FILE):
+        if WORD_TEMPLATE_FILE != "":
             base64pdf = wordTemplateToBase64(country)
             documents[country] = documents[country].replace(
                 '<!-- ATTACHMENT-->', base64pdf)
@@ -59,9 +64,7 @@ def createfiles():
 
 def wordTemplateToBase64(localization):
     with tempfile.TemporaryDirectory(prefix="peppolgenerator-") as tmpdir:
-        df = pandas.read_excel(WORD_VARIABLES_FILE, index_col=0, usecols=['KEY', localization],
-                               keep_default_na=False)
-        dictdata = df.to_dict()
+        dictdata = df[[localization]].to_dict()
         with zipfile.ZipFile(WORD_TEMPLATE_FILE, 'r') as zip_ref:
             zip_ref.extractall(os.path.join(tmpdir, 'unzipped'))
         with open(os.path.join(tmpdir, 'unzipped/word/document.xml'), 'r', encoding='utf8') as f:
