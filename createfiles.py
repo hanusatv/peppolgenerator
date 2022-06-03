@@ -1,5 +1,4 @@
 import os
-from re import A
 import yaml
 import datetime
 import base64
@@ -9,27 +8,33 @@ import tempfile
 import zipfile
 import docx2pdf
 
+FILES_DIR = 'files'
 
 def loadsettings():
+    settings = {}
     with open('settings.yaml', 'r', encoding='utf-8') as f:
-        settings = yaml.safe_load(f)
-        return settings
+        activeDir = yaml.safe_load(f)
+        settings['activedir'] = activeDir
+    with open(os.path.join(FILES_DIR, settings['activedir']['ACTIVE_DIR'],'settings.yaml'), 'r', encoding='utf-8') as f:
+        activeDirSettings = yaml.safe_load(f)
+        print(activeDirSettings)
+        settings['activeDirSettings'] = activeDirSettings
+    return settings
 
 settings = loadsettings()
 
-FILES_DIR = 'files'
-ACTIVE_DIR = os.path.join(FILES_DIR, settings['ACTIVE_DIR'])
-XML_TEMPLATE_FILE_NAME = settings['XML_TEMPLATE_FILE']
-XML_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['XML_TEMPLATE_FILE'])
-XML_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['XML_VARIABLES_FILE'])
-if settings['WORD_TEMPLATE_FILE'] != None:
-    WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['WORD_TEMPLATE_FILE'])
-    WORD_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['WORD_VARIABLES_FILE'])
+ACTIVE_DIR = os.path.join(FILES_DIR, settings['activedir']['ACTIVE_DIR'])
+XML_TEMPLATE_FILE_NAME = settings['activeDirSettings']['XML_TEMPLATE_FILE']
+XML_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['activeDirSettings']['XML_TEMPLATE_FILE'])
+XML_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['activeDirSettings']['XML_VARIABLES_FILE'])
+if settings['activeDirSettings']['WORD_TEMPLATE_FILE'] != None:
+    WORD_TEMPLATE_FILE = os.path.join(ACTIVE_DIR, settings['activeDirSettings']['WORD_TEMPLATE_FILE'])
+    WORD_VARIABLES_FILE = os.path.join(ACTIVE_DIR, settings['activeDirSettings']['WORD_VARIABLES_FILE'])
     attachmentBool = True
 else:
     attachmentBool = False
 
-if settings['WORD_TEMPLATE_FILE'] != None:
+if settings['activeDirSettings']['WORD_TEMPLATE_FILE'] != None:
     df = pandas.read_excel(WORD_VARIABLES_FILE, index_col=0,
                             keep_default_na=False)
 
@@ -38,8 +43,6 @@ def readXmlTemplate():
     with open(XML_TEMPLATE_FILE, 'r', encoding='utf8') as f:
         data = f.read()
         return data
-
-# Make const that is word variables that can be used for each loop by filtering
 
 
 def createfiles():
@@ -59,7 +62,6 @@ def createfiles():
             base64pdf = wordTemplateToBase64(country,outputdirname)
             documents[country] = documents[country].replace(
                 '<!-- ATTACHMENT-->', base64pdf)
-    # Generer oversatte filer
         filename = f'{country} - {XML_TEMPLATE_FILE_NAME}'
         with open(os.path.join(ACTIVE_DIR, outputdirname, filename), 'w', encoding='utf-8-sig') as f:
             f.write(documents[country])
