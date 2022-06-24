@@ -3,6 +3,6 @@ XML_TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 1 - Nod Publishers.xml
 #Word template file you want to embed in the XML file. Must be a .docx file.
 WORD_TEMPLATE_FILE:
 #Variables file that contain translations of localized words for the .xml file. Must be a .xlsx file.
-XML_VARIABLES_FILE: translations.xlsx
+XML_VARIABLES_FILE: variables.xlsx
 #Variables file that contain translations of localized words for the .docx file. Must be a .xlsx file.
 WORD_VARIABLES_FILE:
