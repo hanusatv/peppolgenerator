@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+	<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+	<cbc:ID>100025</cbc:ID>
+	<cbc:IssueDate>2022-01-01</cbc:IssueDate>
+	<cbc:DueDate>2022-01-31</cbc:DueDate>
+	<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+	<cbc:AccountingCost>4025:123:4343</cbc:AccountingCost>
+	<cbc:BuyerReference></cbc:BuyerReference>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="0088">8712345000028</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID>99887765</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Nod Publishers</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Waterloo Place 2-4</cbc:StreetName>
+				<cbc:AdditionalStreetName>Waverly Gate</cbc:AdditionalStreetName>
+				<cbc:CityName>BURCHT</cbc:CityName>
+				<cbc:PostalZone>2070</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>295267495B01</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>          
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>Nod Publishers</cbc:RegistrationName>
+				<cbc:CompanyID>295267495B01</cbc:CompanyID>
+				<cbc:CompanyLegalForm>AdditionalLegalInformation</cbc:CompanyLegalForm>   
+			</cac:PartyLegalEntity>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="0088">0123456789012</cbc:EndpointID>
+			<cac:PartyName>
+				<cbc:Name>CRONUS BE</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>De Ring 5</cbc:StreetName>
+				<cbc:AdditionalStreetName>Zone II</cbc:AdditionalStreetName>
+				<cbc:CityName>MECHELEN</cbc:CityName>
+				<cbc:PostalZone>2800</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>777777777</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>CRONUS BE</cbc:RegistrationName>
+				<cbc:CompanyID schemeID="0183">777777777</cbc:CompanyID>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Name>Dale Lebbink</cbc:Name>
+				<cbc:Telephone>+32 (0)2 424 65 60</cbc:Telephone>
+				<cbc:ElectronicMail>dl@cronus.be</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2022-01-01</cbc:ActualDeliveryDate>
+		<cac:DeliveryLocation>
+			<cbc:ID schemeID="0088">9483759475923478</cbc:ID>
+			<cac:Address>
+				<cbc:StreetName>De Ring 5</cbc:StreetName>
+				<cbc:AdditionalStreetName>Zone II</cbc:AdditionalStreetName>
+				<cbc:CityName>MECHELEN</cbc:CityName>
+				<cbc:PostalZone>2800</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>BE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+		<cac:DeliveryParty>
+			<cac:PartyName>
+				<cbc:Name>DHL</cbc:Name>
+			</cac:PartyName>
+		</cac:DeliveryParty>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
+		<cbc:PaymentID>I100025</cbc:PaymentID>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>IBAN32423940</cbc:ID>
+			<cbc:Name>AccountName</cbc:Name>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID>BIC324098</cbc:ID>
+			</cac:FinancialInstitutionBranch>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>Verschuldigde betaling: 31.01.2022</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="EUR">903</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="EUR">5203</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="EUR">903</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>21</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="EUR">4300</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="EUR">4300</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="EUR">5203</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="EUR">5203</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="EA">7</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID= "EUR">2800</cbc:LineExtensionAmount>
+		<cac:OrderLineReference>
+			<cbc:LineID>10000</cbc:LineID>
+		</cac:OrderLineReference>
+		<cac:Item>
+			<cbc:Description>LONDON stoel, blauw</cbc:Description>
+			<cbc:Name>LONDON stoel, blauw</cbc:Name>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeID="0088">21382183120983</cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:SellersItemIdentification>
+				<cac:ID>C1908</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="SRV">09348023</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>21</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">400</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="EA">3</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">1500</cbc:LineExtensionAmount>
+		<cac:OrderLineReference>
+			<cbc:LineID>2000</cbc:LineID>
+		</cac:OrderLineReference>
+		<cac:Item>
+			<cbc:Description>PARIS stoel, zwart</cbc:Description>
+			<cbc:Name>PARIS stoel, zwart</cbc:Name>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeID="0088">21382183120984</cbc:ID>
+			</cac:StandardItemIdentification>
+			<cac:SellersItemIdentification>
+				<cac:ID>C1900</cac:ID>
+			</cac:SellersItemIdentification>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+			</cac:OriginCountry>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="SRV">09348023</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>21</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">500</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>
