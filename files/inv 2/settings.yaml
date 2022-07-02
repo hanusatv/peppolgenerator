@@ -1,8 +1,4 @@
-#XML template file you want to generate localized copies of.
-XML_TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 2 - Nod Publishers.xml
-#Word template file you want to embed in the XML file. Must be a .docx file.
 WORD_TEMPLATE_FILE: word.docx
-#Variables file that contains translations of localized words for the .xml file. Must be a .xlsx file.
-XML_VARIABLES_FILE: xmlvariables.xlsx
-#Variables file that contains translations of localized words for the .docx file. Must be a .xlsx file.
 WORD_VARIABLES_FILE: wordvariables.xlsx
+XML_TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 2 - Nod Publishers.xml
+XML_VARIABLES_FILE: xmlvariables.xlsx

@@ -1,3 +1,4 @@
+from operator import inv
 import os
 import json
 import pandas
@@ -14,17 +15,21 @@ def getdir():
     FILES_DIR = getroot()
 
     invoiceFolder = {}
-    templist = []
 
     for root, dirs, files in os.walk(FILES_DIR):
         if root == FILES_DIR:
             for invDir in dirs:
                 key = os.path.join(root, invDir)
                 invoiceFolder[key] = {}
-                templist
         elif root in invoiceFolder:
             invoiceFolder[root]['files'] = files
             invoiceFolder[root]['dirs'] = dirs
+            if 'settings.yaml' in invoiceFolder[root]['files']:
+                with open(os.path.join(root, 'settings.yaml'), 'r', encoding='utf-8') as file:
+                    settings = yaml.safe_load(file)
+                    invoiceFolder[root]['settings'] = settings
+            else:
+                invoiceFolder[root]['settings'] = {}
 
     return invoiceFolder
 
@@ -54,6 +59,6 @@ def setsettings(subdir, xmlTemplate, xmlVariables, wordTemplate, wordVariables):
         'WORD_VARIABLES_FILE': wordVariables
     }
 
-    with open(os.path.join(subdir, 'settings.yaml'), 'w') as file:
-        yaml.dump(settings, file)
+    with open(os.path.join(subdir, 'settings.yaml'), 'w') as yamlfile:
+        yaml.dump(settings, yamlfile)
         return

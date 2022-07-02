@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from waitress import serve
 import controllers as ctl
+import createfiles as crtf
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'CasaDelPiss'
@@ -16,7 +17,7 @@ def index():
 
 @app.route('/setroot', methods=['POST'])
 def setroot():
-    path = request.headers.get('rootdir')
+    path = request.form['rootdir']
     ctl.setroot(path)
     return redirect('/')
 
@@ -30,6 +31,13 @@ def setsettings():
     subdir = request.form.get('subdir') or None
     ctl.setsettings(subdir, xmlTemplate, xmlVariables,
                     wordTemplate, wordVariables)
+    return redirect('/')
+
+
+@app.route('/createfiles', methods=['POST'])
+def createfiles():
+    subdir = request.headers.get('subdir')
+    crtf.createfiles(subdir)
     return redirect('/')
 
 
