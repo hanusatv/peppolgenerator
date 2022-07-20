@@ -8,7 +8,6 @@ import yaml
 df = pandas.read_excel('C:/Users/hadis/source/repos/peppolgenerator/files/inv 1/variables.xlsx', index_col=0,
                        keep_default_na=False)
 dfHead = list(df.columns)
-# print(dfHead)
 
 
 def getdir():
@@ -79,4 +78,3 @@ def setsettings(subdir, xmlTemplate, xmlVariables, wordTemplate, wordVariables, 
 def loadsettings(subdir):
     with open(os.path.join(subdir, 'settings.yaml'), 'r', encoding='utf-8') as f:
         subdirSettings = yaml.safe_load(f)
-    print(subdirSettings)
