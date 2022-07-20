@@ -1,3 +1,8 @@
+INCLUDED_LOCALIZATONS:
+  - DE
+  - DK
+  - NL
+  - "NO"
 WORD_TEMPLATE_FILE: null
 WORD_VARIABLES_FILE: null
 XML_TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 1 - Nod Publishers.xml

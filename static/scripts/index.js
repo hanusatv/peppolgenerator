@@ -1,15 +1,16 @@
-function test(e) {
-    let modal = new bootstrap.Modal(document.getElementById('staticBackdrop'))
-    modal.show()
-    setTimeout(function () {
-        modal.hide()
-    },
-        2000)
+function copySubdir(e) {
+    let myToast = new bootstrap.Toast(document.getElementById('copiedToClipboard'))
+    let clipboardtext = e.previousElementSibling.value
+    navigator.clipboard.writeText(clipboardtext);
+    myToast.show()
+    setTimeout(() => { myToast.hide() }, 5000)
 }
 
 async function createfiles(e) {
     let card = e.closest("#card")
-    let subdir = card.querySelector('#subdir').innerText
+    console.log(card)
+    let subdir = card.querySelector('#subdir').value
+    console.log(subdir)
     let modal = new bootstrap.Modal(document.getElementById('staticBackdrop'))
     modal.show()
     setTimeout(() => {
@@ -20,7 +21,7 @@ async function createfiles(e) {
             }
         }).then(res => {
             if (!res.ok) {
-                alert('Something went wrong. Try restaring the service')
+                alert('Something went wrong. Check your settings and/or try restaring the service')
             }
             modal.hide()
             window.location.reload()

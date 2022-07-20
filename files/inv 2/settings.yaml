@@ -1,3 +1,9 @@
+INCLUDED_LOCALIZATONS:
+- AT
+- FI
+- FR
+- 'NO'
+- US
 WORD_TEMPLATE_FILE: word.docx
 WORD_VARIABLES_FILE: wordvariables.xlsx
 XML_TEMPLATE_FILE: BC online - PEPPOL3 - Purchase Invoice 2 - Nod Publishers.xml

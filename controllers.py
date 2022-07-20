@@ -24,13 +24,19 @@ def getdir():
         elif root in invoiceFolder:
             invoiceFolder[root]['files'] = files
             invoiceFolder[root]['dirs'] = dirs
+            # Check if settings exist
             if 'settings.yaml' in invoiceFolder[root]['files']:
                 with open(os.path.join(root, 'settings.yaml'), 'r', encoding='utf-8') as file:
                     settings = yaml.safe_load(file)
                     invoiceFolder[root]['settings'] = settings
+                    if settings['XML_VARIABLES_FILE'] != None:
+                        df = pandas.read_excel(os.path.join(root, settings['XML_VARIABLES_FILE']), index_col=0,
+                                               keep_default_na=False)
+                        invoiceFolder[root]['localizations'] = list(df.columns)
+                    else:
+                        invoiceFolder[root]['localizations'] = []
             else:
                 invoiceFolder[root]['settings'] = {}
-
     return invoiceFolder
 
 
@@ -51,14 +57,26 @@ def getroot():
             return(data['rootdir'])
 
 
-def setsettings(subdir, xmlTemplate, xmlVariables, wordTemplate, wordVariables):
+def setsettings(subdir, xmlTemplate, xmlVariables, wordTemplate, wordVariables, localizations):
     settings = {
         'XML_TEMPLATE_FILE': xmlTemplate,
         'XML_VARIABLES_FILE': xmlVariables,
         'WORD_TEMPLATE_FILE': wordTemplate,
-        'WORD_VARIABLES_FILE': wordVariables
+        'WORD_VARIABLES_FILE': wordVariables,
+        'INCLUDED_LOCALIZATONS': localizations
     }
 
-    with open(os.path.join(subdir, 'settings.yaml'), 'w') as yamlfile:
+    with open(os.path.join(subdir, 'settings.yaml'), 'w', encoding='utf-8') as yamlfile:
         yaml.dump(settings, yamlfile)
         return
+
+
+##
+# Test
+##
+
+
+def loadsettings(subdir):
+    with open(os.path.join(subdir, 'settings.yaml'), 'r', encoding='utf-8') as f:
+        subdirSettings = yaml.safe_load(f)
+    print(subdirSettings)

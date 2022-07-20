@@ -29,8 +29,10 @@ def setsettings():
     wordTemplate = request.form.get('Wordtemplate') or None
     wordVariables = request.form.get('Wordvariables') or None
     subdir = request.form.get('subdir') or None
+    localizations = request.form.getlist('localizations[]')
+    print(localizations)
     ctl.setsettings(subdir, xmlTemplate, xmlVariables,
-                    wordTemplate, wordVariables)
+                    wordTemplate, wordVariables, localizations)
     return redirect('/')
 
 
